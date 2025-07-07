@@ -8,13 +8,13 @@ import "./globals.css";
 
 export default function RootLayout() {
 
-  const [fontsLoaded , error] = useFonts({
-    "QuickSand-Bold" : require('../assets/fonts/Quicksand-Bold.ttf'),
+  const  [loaded, error]  = useFonts({
+    "Quicksand-Bold" : require('../assets/fonts/Quicksand-Bold.ttf'),
 
-    "QuickSand-Medium" : require('../assets/fonts/Quicksand-Medium.ttf'),
-    "QuickSand-Regular" : require('../assets/fonts/Quicksand-Regular.ttf'),
-    "QuickSand-SemiBold" : require('../assets/fonts/Quicksand-SemiBold.ttf'),
-    "QuickSand-Light" : require('../assets/fonts/Quicksand-Light.ttf'),  
+    "Quicksand-Medium" : require('../assets/fonts/Quicksand-Medium.ttf'),
+    "Quicksand-Regular" : require('../assets/fonts/Quicksand-Regular.ttf'),
+    "Quicksand-SemiBold" : require('../assets/fonts/Quicksand-SemiBold.ttf'),
+    "Quicksand-Light" : require('../assets/fonts/Quicksand-Light.ttf'),  
 
   })
 
@@ -23,9 +23,9 @@ export default function RootLayout() {
 
     if(error) throw error
 
-    if(fontsLoaded) SplashScreen.hideAsync();
+    if(loaded) SplashScreen.hideAsync();
 
-  }, [fontsLoaded, error])
+  }, [loaded, error])
   return <Stack screenOptions={{
     headerShown:false
   }}/>;
